@@ -42,7 +42,8 @@ public class Build {
 					System.exit(0);
 				}
 				if (value > -1) {
-					System.out.println("Variable found! Increasing to: " + value++);
+					value++;
+					System.out.println("Variable found! Increasing to: " + value);
 					try {
 						List<String> fileContent = new ArrayList<>(Files.readAllLines(file.toPath(), StandardCharsets.UTF_8));
 						for (int i = 0; i < fileContent.size(); i++) {
